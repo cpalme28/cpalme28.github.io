@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This part of the site focuses on the Berch family branch of the Palmers.">
+        <title>Rooted in Palmer</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="family.jpeg" alt="Family Photo">
+            <h1><a href="index.html">Rooted in Palmer</a></h1>
+        </header>
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="family.html">Family Tree</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="palmers.html">Palmers</a></li>
+                        <li><a href="odles.html">Odles</a></li>
+                        <li><a href="berches.html">Berches</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        <main class="main-container">
+            <div class="banner">
+                <p>
+                    Brenda is the middle kid of her siblings. She met Eric in high school, just like her other two 
+                    siblings. The two of them have two children of their own, Sami and Sidnee. In 2008, the four
+                    of them moved from Arizona to Florida, where Eric launched a finance company with his two brothers.
+                    In 2022, Sami married Marcello and the two of them are expecting their first child to be born in
+                    March 2026. Sidnee curently lives in Ohio where she works for the Cincinatti Bengals.
+                </p>
+            </div>
+
+            <div class="columns">
+                <div class="col">
+                    <h2>Important/Upcoming Dates</h2>
+                    <ul>
+                        <li>December 4 - 9: Brenda and Eric come to Arizona</li>
+                        <li>December 22: Sidnee comes home for the holidays!</li>
+                        <li>January 18: Eric's work trip to New York</li>
+                        <li>March: Sami and Marcello are expecting their first child!!</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Photos</h2>
+                    <div id="slideshow">
+                        <img src="sidnee-bengals.jpeg" class="fit-image" alt="Sidnee working at a Bengals game">
+                        <img src="berch-christmas.jpeg" class="fit-image" alt="Brenda, Sami, and Sidnee during Christmas time">
+                        <img src="berch-derby.jpeg" class="fit-image" alt="Brenda and Eric at the Kentucky Derby">
+                        <img src="berch-family.jpeg" class="fit-image" alt="The complete Berch family at a wedding">
+                        <img src="berch-panthers.jpeg" class="fit-image" alt="The Berches celebrating the Panther's Stanley Cup win">
+                    </div>
+                </div>
+            </div>
+
+            <h2>Stories</h2>
+            <p>Dig deeper into the history that is the Berch Branch of the family!</p>
+            <details>
+                <summary>Sidnee gets a promotion!</summary>
+                <p>
+                    Following her love of sports, Sidnee continues to work for the Cincinatti Bengals. She started
+                    in the organization as an assistant, but is now the director of Social Media management and
+                    works closely with the marketing department. She loves every moment of cheering on her Bengals,
+                    despite the ups and downs of the season. <br><br>
+
+                    She started her career in sports at the Jacksonville Gladiators, an ECHL team in Georgia. She 
+                    soon moved up with that organization before she got the opportunity to work for the Bengals.
+                    We are all so proud of her and can't wait to see what she does next!
+                </p>
+            </details>
+            <details>
+                <summary>Baby announcement!</summary>
+                <p>
+                    Sami and Marcello are expecting their first child in March of 2026! The two of them are 
+                    over the moon excited to be parents and can't wait to meet their little one. We are all
+                    so excited to welcome a new member to the Berch family! <br><br>
+
+                    The couple first told their immediate families before Brenda and Sami shared the news with
+                    Nana and Papa. Not known for being able to keep secrets this big a secret, they were 
+                    thrilled and shared the news with the rest of the family in Arizona. <br><br>
+
+                    In October, Sami and Marcello announced their their first child is going to be a girl.
+                    As Nate and Christian said, "Why aren't there more girls in the family!" as the two of them
+                    are the only male grandchildren.
+                </p>
+            </details>
+        </main>
+        <footer>
+            <p>Rooted in Palmer</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family Tree</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <p><a href="mailto:cpalme28@asu.edu">cpalme28@asu.edu</a></p>
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                let images = $("#slideshow img");
+                let index = 0;
+
+                images.eq(index).addClass("active");
+
+                setInterval(function() {
+                    images.eq(index).removeClass("active");
+                    index = (index + 1) % images.length;
+                    images.eq(index).addClass("active");
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>

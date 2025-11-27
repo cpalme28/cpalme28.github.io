@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Suggest a story to be highlighted on the website.">
+        <title>Rooted in Palmer</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="referrer" content="origin">
+    </head>
+    <body>
+        <header>
+            <img src="family.jpeg" alt="Family Photo">
+            <h1><a href="index.html">Rooted in Palmer</a></h1>
+        </header>
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="family.html">Family Tree</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="palmers.html">Palmers</a></li>
+                        <li><a href="odles.html">Odles</a></li>
+                        <li><a href="berches.html">Berches</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        <main class="main-container">
+            <h2>Suggest a Story!</h2>
+            <p>
+                If you want a story or recent even to be highlighted on the website, submit this form so I can add it!<br>
+                *It will be uploaded at my discretion*
+            </p>
+            <form method="post" action="https://formspree.io/cpalme28@asu.edu">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <label for="story">Story/Event you want included:</label><br>
+                <textarea id="story" name="story" rows="4" cols="50" required></textarea>
+                <br><br>
+
+                <label for="why">Why do you want this included?</label><br>
+                <textarea id="why" name="why" rows="4" cols="50" required></textarea>
+                <br><br>
+
+                <label>Which page do you want it on?</label><br>
+                <input type="radio" id="family_tree" name="where" value="family_tree">
+                <label for="family_tree">Family Tree</label><br>
+                <input type="radio" id="palmers" name="where" value="palmers">
+                <label for="palmers">Palmers</label><br>
+                <input type="radio" id="berches" name="where" value="berches">
+                <label for="berches">Berches</label><br>   
+                <input type="radio" id="odles" name="where" value="odles">             
+                <label for="odles">Odles</label>
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        <footer>
+            <p>Rooted in Palmer</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family Tree</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <p><a href="mailto:cpalme28@asu.edu">cpalme28@asu.edu</a></p>
+        </footer>
+
+    </body>
+</html>

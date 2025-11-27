@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This part of the site focuses on the Odle family branch of the Palmers.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rooted in Palmer</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="family.jpeg" alt="Family Photo">
+            <h1><a href="index.html">Rooted in Palmer</a></h1>
+        </header>
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="family.html">Family Tree</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="palmers.html">Palmers</a></li>
+                        <li><a href="odles.html">Odles</a></li>
+                        <li><a href="berches.html">Berches</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        <main class="main-container">
+            <main class="main-container">
+            <div class="banner">
+                <p>
+                    Patty is the oldest out of her siblings. She married Rusty, who she met in high school, and they have
+                    two children of their own, Nate and Alexis. In 2013, Nate married Mandi, who he met in college at 
+                    GCU. The two of them have two children of their own, Emily and Kaylee. 
+                </p>
+            </div>
+
+            <div class="columns">
+                <div class="col">
+                    <h2>Important/Upcoming Dates</h2>
+                    <ul>
+                        <li>December 10: Nate and Mandi's 12th wedding anniversary</li>
+                        <li>January 24: Emily's birthday</li>
+                        <li>February 13: Alexis' birthday</li>
+                        <li>February 20: Patty celebrates 10 years working at ASU</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Photos</h2>
+                    <div id="slideshow">
+                        <img src="christian-emily.jpeg" class="fit-image" alt="Christian with Emily">
+                        <img src="coree-alexis-thanksgiving.JPG" class="fit-image" alt="Coree and Alexis at Thanksgiving">
+                        <img src="emily.jpeg" class="fit-image" alt="Solo shot of Emily">
+                        <img src="family-softball.jpeg" class="fit-image" alt="The family at Coree's softball senior night">
+                    </div>
+                </div>
+            </div>
+
+            <h2>Stories</h2>
+            <p>Dig deeper into the history that is the Odle Branch of the family!</p>
+            <details>
+                <summary>Nate gets a new job!</summary>
+                <p>
+                    After working as a behaviorial specialist at Tolleson High School for seven years, Nate is 
+                    making moves. He still is going to be working at Tolleson High School, but now he is going
+                    to be one of their IT specialists. While still in the same educational realm, this is a big
+                    step forward for him in his career. Congratulations Nate!
+                </p>
+            </details>
+            <details>
+                <summary>Alexis celebrates 12 years as a teacher!</summary>
+                <p>
+                    From a young age, Alexis always knew that she wanted to be a teacher and to help kids with
+                    their schooling. She has been teaching for 12 years now, and she is currently the lead teacher
+                    at her school for children with special needs. Her dedication to her students is inspiring to
+                    and we are all so proud of her! <br><br>
+
+                    She started working in the kindergarten classroom, but she has found her place working with 
+                    special needs children. It is not always easy, but not even the toughest days can keep her
+                    down. Keep up the great work Alexis!
+                </p>
+            </details>
+        </main>
+        </main>
+        <footer>
+            <p>Rooted in Palmer</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="family.html">Family Tree</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <p><a href="mailto:cpalme28@asu.edu">cpalme28@asu.edu</a></p>
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                let images = $("#slideshow img");
+                let index = 0;
+
+                images.eq(index).addClass("active");
+
+                setInterval(function() {
+                    images.eq(index).removeClass("active");
+                    index = (index + 1) % images.length;
+                    images.eq(index).addClass("active");
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>
